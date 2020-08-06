@@ -15,5 +15,4 @@ The code uses VSCode's [`TextEditor.setDecorations`](https://code.visualstudio.c
 * `npm run watch` to start the compiler in watch mode
 * open this folder in VS Code and press `F5`
 * this will open the `[Extension Development Host]` window, running the extension:
-  * Open any document that contains single and multi-digit numbers.
-  * The extension will decorate single and multiple-digit numbers as shown in the screenshot above.
+  * Open any document and start typing to see Bongo Cat
