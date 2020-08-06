@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { DecorationOptions, TextEditorDecorationType } from 'vscode';
+import { DecorationOptions, TextEditorDecorationType, EndOfLine } from 'vscode';
 
 // this method is called when vs code is activated
 export function activate(context: vscode.ExtensionContext) {
@@ -31,8 +31,14 @@ export function activate(context: vscode.ExtensionContext) {
 		const decorationType = decorations[decorationNumber];
 		// create a decorator type that we use to decorate large numbers
 		const text = activeEditor.document.getText();
-		const startPos = activeEditor.document.positionAt(text.length - 1);
-		const endPos = activeEditor.document.positionAt(text.length);
+		const cursorPosition = activeEditor.selection.active;
+		// Find closest line end
+		const cursorOffset = activeEditor.document.offsetAt(cursorPosition);
+		const nextEndOfLine = text.indexOf(activeEditor.document.eol === EndOfLine.LF ? '\n' : '\r\n', cursorOffset);
+		const iconPositionEnd = nextEndOfLine > -1 ? nextEndOfLine : text.length;
+		// Create decoration positions
+		const startPos = activeEditor.document.positionAt(iconPositionEnd - 1);
+		const endPos = activeEditor.document.positionAt(iconPositionEnd);
 		const decoration: DecorationOptions = {
 			range: new vscode.Range(startPos, endPos),
 		};
