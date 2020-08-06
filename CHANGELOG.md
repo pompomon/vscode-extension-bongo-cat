@@ -10,6 +10,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Decoration follows the cursor line
 
+## v.0.0.2
+### Added
+- Release script
+### Changed
+- Decoration follows the cursor line
+
 ## v.0.0.1
 
 ### Added
