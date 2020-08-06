@@ -30,5 +30,8 @@
     "eslint": "^7.1.0",
     "typescript": "^3.9.4",
     "@types/vscode": "^1.32.0"
+  },
+  "dependencies": {
+    "@octokit/core": "^3.1.2"
   }
 }
