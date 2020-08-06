@@ -3,7 +3,7 @@
 This extension is based on the official [vscode-extension-samples/decorator-sample/](https://github.com/Microsoft/vscode-extension-samples/tree/master/decorator-sample).
 It adds Bongo Cat animated icon to the end of the file. 
 
-![Bongo Cat Decorator preview](preview.png)
+![Bongo Cat Decorator preview](preview.gif)
 
 ## VSCode API
 
