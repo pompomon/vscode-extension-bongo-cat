@@ -21,7 +21,8 @@
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "lint": "eslint . --ext .ts,.tsx",
-    "watch": "tsc -watch -p ./"
+    "watch": "tsc -watch -p ./",
+    "release": "node ./scripts/release.js"
   },
   "devDependencies": {
     "@types/node": "^12.12.0",
