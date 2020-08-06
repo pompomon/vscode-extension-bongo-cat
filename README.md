@@ -9,7 +9,7 @@ It adds Bongo Cat animated icon to the end of the file.
 
 The code uses VSCode's [`TextEditor.setDecorations`](https://code.visualstudio.com/api/references/vscode-api#TextEditor.setDecorations) and [`vscode.window.createTextEditorDecorationType`](https://code.visualstudio.com/api/references/vscode-api#window.createTextEditorDecorationType) APIs.
 
-## Running the Sample
+## Running the code
 
 * `npm install` to initialize the project
 * `npm run watch` to start the compiler in watch mode
