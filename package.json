@@ -1,7 +1,7 @@
 {
   "name": "bongo-cat",
   "description": "Bongo cat decorator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "pompomon",
   "license": "MIT",
   "engines": {
@@ -22,6 +22,7 @@
     "compile": "tsc -p ./",
     "lint": "eslint . --ext .ts,.tsx",
     "watch": "tsc -watch -p ./",
+    "package": "vsce package",
     "release": "node ./scripts/release.js"
   },
   "devDependencies": {

@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Added
 ### Changed
+- `npm audit fix` update
+- `package.json` version update
 
 ## v.0.0.2
 ### Added
