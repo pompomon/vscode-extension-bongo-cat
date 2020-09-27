@@ -19,7 +19,17 @@ export function activate(context: vscode.ExtensionContext) {
 			contentIconPath: `${extensionPath}/media/icons/bongo-cat-2.png`,
 		},
 	});
-	const decorations = [pawsUpDecoration, pawsDownDecoration];
+	const rightPawDownDecoration = vscode.window.createTextEditorDecorationType({
+		after: {
+			contentIconPath: `${extensionPath}/media/icons/bongo-cat-3.png`,
+		},
+	});
+	const leftPawDownDecoration = vscode.window.createTextEditorDecorationType({
+		after: {
+			contentIconPath: `${extensionPath}/media/icons/bongo-cat-4.png`,
+		},
+	});
+	const decorations = [pawsUpDecoration, leftPawDownDecoration, rightPawDownDecoration, pawsDownDecoration, leftPawDownDecoration, rightPawDownDecoration];
 
 	let activeEditor = vscode.window.activeTextEditor;
 	let lastDecorationType:TextEditorDecorationType | null = null;
