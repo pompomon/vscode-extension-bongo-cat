@@ -3,6 +3,8 @@ import { DecorationOptions, TextEditorDecorationType, EndOfLine } from 'vscode';
 
 // this method is called when vs code is activated
 export function activate(context: vscode.ExtensionContext) {
+	const UPDATE_DECORATIONS_TIMEOUT = 200;
+	const RESET_DECARATIONS_TIMEOUT = 50;
 	const extensionPath = context.extensionPath;
 	let decorationNumber = 0;
 
@@ -59,7 +61,7 @@ export function activate(context: vscode.ExtensionContext) {
 		lastDecorationType = decorationType;
 		decorationNumber++;
 		decorationNumber = decorationNumber % decorations.length;
-		timeout = setTimeout(updateDecorations, 200);
+		timeout = setTimeout(updateDecorations, UPDATE_DECORATIONS_TIMEOUT);
 	}
 
 	function triggerUpdateDecorations() {
@@ -67,7 +69,7 @@ export function activate(context: vscode.ExtensionContext) {
 			clearTimeout(timeout);
 			timeout = undefined;
 		}
-		timeout = setTimeout(updateDecorations, 50);
+		timeout = setTimeout(updateDecorations, RESET_DECARATIONS_TIMEOUT);
 	}
 
 	if (activeEditor) {
