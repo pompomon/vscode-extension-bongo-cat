@@ -38,19 +38,19 @@
   "dependencies": {
     "@octokit/core": "^3.1.2"
   },
-	"release": {
-		"branches": "master",
-		"verifyConditions": [
-			"@semantic-release/github"
-		],
-		"publish": [
-			"@semantic-release/github"
-		],
-		"success": [
-			"@semantic-release/github"
-		],
-		"fail": [
-			"@semantic-release/github"
-		]
-	}
+  "release": {
+    "branches": "master",
+    "verifyConditions": [
+      "@semantic-release/github"
+    ],
+    "publish": [
+      "@semantic-release/github"
+    ],
+    "success": [
+      "@semantic-release/github"
+    ],
+    "fail": [
+      "@semantic-release/github"
+    ]
+  }
 }

@@ -39,7 +39,7 @@ jobs:
       - name: Install VSCE
         run: npm install vsce
       - name: Package extension
-        run: npm package
+        run: npm run package
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
