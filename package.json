@@ -23,7 +23,7 @@
     "compile": "tsc -p ./",
     "lint": "eslint . --ext .ts,.tsx",
     "watch": "tsc -watch -p ./",
-    "package": "vsce package",
+    "package": "vsce package -o bongocat.vsix",
     "test": "echo test"
   },
   "devDependencies": {
@@ -49,7 +49,7 @@
         {
           "assets": [
             {
-              "path": "bongo-cat*.vsix",
+              "path": "bongocat.vsix",
               "label": "VSIX distribution"
             }
           ]
