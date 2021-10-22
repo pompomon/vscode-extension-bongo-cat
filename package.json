@@ -27,8 +27,8 @@
     "test": "echo test"
   },
   "devDependencies": {
-    "@semantic-release/git": "^7.0.5",
-    "@semantic-release/github": "^7.0.5",
+    "semantic-release": "^17.0.0",
+    "semantic-release-vsce": "^2.1.0",
     "@types/node": "^12.12.0",
     "@typescript-eslint/eslint-plugin": "^3.0.2",
     "@typescript-eslint/parser": "^3.0.2",
@@ -42,23 +42,19 @@
   "release": {
     "branches": "master",
     "verifyConditions": [
-      "@semantic-release/github",
-      "@semantic-release/git"
-    ],
-    "prepare": [
-      [
-        "@semantic-release/git",
-        {
-          "assets": [
-            "CHANGELOG.md",
-            "bongo-cat-*.vsix"
-          ],
-          "message": "chore(release): set `package.json` to ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-        }
-      ]
-    ],
-    "publish": [
+      "semantic-release-vsce",
       "@semantic-release/github"
+    ],
+    "prepare": {
+      "path": "semantic-release-vsce",
+      "packageVsix": true
+    },
+    "publish": [
+      "semantic-release-vsce",
+      {
+        "path": "@semantic-release/github",
+        "assets": "*.vsix"
+      }
     ],
     "success": [
       "@semantic-release/github"
