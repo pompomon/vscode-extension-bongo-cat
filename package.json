@@ -1,7 +1,7 @@
 {
   "name": "bongo-cat",
   "description": "Bongo cat decorator",
-  "version": "0.0.2",
+  "version": "10.0.0",
   "publisher": "pompomon",
   "license": "MIT",
   "engines": {
@@ -44,11 +44,17 @@
       "@semantic-release/github"
     ],
     "publish": [
-      ["@semantic-release/github", {
-        "assets": [
-          {"path": "bongo-cat*.vsix", "label": "VSIX distribution"}
-        ]
-      }]
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            {
+              "path": "bongo-cat*.vsix",
+              "label": "VSIX distribution"
+            }
+          ]
+        }
+      ]
     ],
     "success": [
       "@semantic-release/github"
