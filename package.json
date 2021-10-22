@@ -44,7 +44,14 @@
       "@semantic-release/github"
     ],
     "publish": [
-      "@semantic-release/github"
+      "@semantic-release/github",
+      [
+        "@semantic-release/git",
+        {
+          "assets": ["CHANGELOG.md", "package.json", "bongo-cat-*.vsix"],
+          "message": "chore(release): set `package.json` to ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
     ],
     "success": [
       "@semantic-release/github"
